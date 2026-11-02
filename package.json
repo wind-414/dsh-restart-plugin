@@ -20,6 +20,7 @@
     "./icon": "./assets/icon.svg"
   },
   "files": [
+    "index.js",
     "src/",
     "locales/",
     "assets/",
@@ -27,6 +28,10 @@
     "README.md",
     "LICENSE"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wind-414/dsh-restart-plugin.git"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
