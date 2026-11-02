@@ -1,0 +1,42 @@
+{
+  "name": "dsh-restart-plugin",
+  "version": "0.2.0",
+  "private": false,
+  "type": "module",
+  "main": "./src/host/index.js",
+  "description": "A restart button for the DeepSeek Harness desktop app, pinned above the sidebar account row.",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "restart",
+    "bundle",
+    "cordis"
+  ],
+  "exports": {
+    ".": "./src/host/index.js",
+    "./client": "./src/client/index.js",
+    "./locale/*.json": "./locales/*.json",
+    "./icon": "./assets/icon.svg"
+  },
+  "files": [
+    "src/",
+    "locales/",
+    "assets/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
